@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Resume</title>
+  <meta name="description" content="Resume of Your Name." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="nav__brand" href="index.html">your<span>.name</span></a>
+      <div class="nav__links">
+        <a href="index.html">home</a>
+        <a href="projects.html">projects</a>
+        <a href="resume.html" aria-current="page">resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section wrap">
+      <div class="resume-head">
+        <div>
+          <p class="eyebrow">/resume</p>
+          <h2>Your Name</h2>
+          <p class="muted">Role / focus · City, State · you@example.com</p>
+        </div>
+        <!-- Drop your PDF next to these files and point href at it -->
+        <a class="btn btn--accent" href="resume.pdf" download>Download PDF ↓</a>
+      </div>
+
+      <!-- ===== Experience ===== -->
+      <div class="section__head"><p class="eyebrow">/experience</p></div>
+      <div class="entry-group" style="margin-bottom: 3.5rem;">
+
+        <div class="entry">
+          <div class="entry__top">
+            <div>
+              <span class="entry__role">Job title</span>
+              <span class="entry__org"> · Organization</span>
+            </div>
+            <span class="entry__date">Mon 20XX — Present</span>
+          </div>
+          <ul>
+            <li>Accomplishment with a number in it — quantify the impact where you can.</li>
+            <li>What you did and what changed because of it.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry__top">
+            <div>
+              <span class="entry__role">Job title</span>
+              <span class="entry__org"> · Organization</span>
+            </div>
+            <span class="entry__date">Mon 20XX — Mon 20XX</span>
+          </div>
+          <ul>
+            <li>Accomplishment. Lead with the verb, end with the result.</li>
+            <li>Another bullet.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ===== Education ===== -->
+      <div class="section__head"><p class="eyebrow">/education</p></div>
+      <div class="entry-group" style="margin-bottom: 3.5rem;">
+        <div class="entry">
+          <div class="entry__top">
+            <div>
+              <span class="entry__role">Degree, Major</span>
+              <span class="entry__org"> · University</span>
+            </div>
+            <span class="entry__date">Expected 20XX</span>
+          </div>
+          <ul>
+            <li>Relevant coursework, honors, GPA if you want it, activities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== Skills ===== -->
+      <div class="section__head"><p class="eyebrow">/skills</p></div>
+      <div class="skills">
+        <div>
+          <h3>Languages</h3>
+          <p>Python, C, ...</p>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <p>Git, ...</p>
+        </div>
+        <div>
+          <h3>Domains</h3>
+          <p>Area, area, ...</p>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <p>Cert, cert</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Your Name</p>
+      <div class="footer-links">
+        <a class="link" href="mailto:you@example.com">email</a>
+        <a class="link" href="https://github.com/yourusername">github</a>
+        <a class="link" href="https://linkedin.com/in/yourusername">linkedin</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
