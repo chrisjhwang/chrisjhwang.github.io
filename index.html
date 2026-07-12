@@ -3,97 +3,336 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christine Hwang — Home</title>
-  <meta name="description" content="Portfolio of Christine Hwang — put a one-line summary here." />
+  <title>Christine Hwang — Cybersecurity Portfolio</title>
+  <meta name="description" content="Christine Hwang — CS &amp; Cybersecurity student focused on cyber compliance, risk management, and building secure systems." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ===== Header (identical across all pages) ===== -->
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Primary">
-      <a class="nav__brand" href="index.html">christine<span>.hwang</span></a>
+  <!-- ===== Nav (fixed, scroll-spy) ===== -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#home">&lt;christine.hwang /&gt;</a>
       <div class="nav__links">
-        <a href="index.html" aria-current="page">home</a>
-        <a href="projects.html">projects</a>
-        <a href="resume.html">resume</a>
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#resume" data-nav="resume">Resume</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main>
+
     <!-- ===== Hero ===== -->
-    <section class="hero wrap">
-      <p class="eyebrow reveal">/home</p>
-      <h1 class="hero__name reveal">Christine Hwang</h1>
-      <p class="hero__role reveal">Third-Year CS Student &amp; Systems Researcher</p>
-      <p class="hero__intro reveal">
-        One or two sentences on who you are and what you build. Keep it plain and specific —
-        say what you actually do, not adjectives. Replace this whole block.
-      </p>
-      <div class="hero__actions reveal">
-        <a class="btn btn--accent" href="projects.html">View projects →</a>
-        <a class="btn" href="resume.html">Resume</a>
-      </div>
-    </section>
+    <section id="home" class="hero">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__reveal" id="hero-reveal" aria-hidden="true"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
 
-    <!-- ===== "Currently" status strip ===== -->
-    <section class="section">
-      <div class="wrap">
-        <p class="eyebrow">/currently</p>
-        <dl class="status">
-          <div class="status__cell">
-            <dt>Now</dt>
-            <dd>What you're working on</dd>
-          </div>
-          <div class="status__cell">
-            <dt>Focus</dt>
-            <dd>Primary interest area</dd>
-          </div>
-          <div class="status__cell">
-            <dt>Location</dt>
-            <dd>City, State</dd>
-          </div>
-          <div class="status__cell">
-            <dt>Open to</dt>
-            <dd>Roles / collaboration</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ===== Short about ===== -->
-    <section class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <p class="eyebrow">/about</p>
-          <h2>A line that frames who you are.</h2>
-          <p>
-            A short paragraph of context. Background, what you care about, the kind of problems
-            you like working on. Two or three sentences is plenty for a landing page — depth
-            lives on the projects and resume pages.
-          </p>
+      <div class="hero__content">
+        <p class="hero__eyebrow">&gt; Hello, World!</p>
+        <h1 class="hero__name">Christine Hwang</h1>
+        <div class="hero__role">
+          <span id="typed-role"></span><span class="cursor" aria-hidden="true"></span>
         </div>
-        <a class="link" href="resume.html">Read the full background →</a>
+        <p class="hero__intro">
+          CS &amp; Cybersecurity student focused on cyber compliance, risk management, and
+          building secure systems. Interested in bridging the gap between technical security
+          controls and regulatory frameworks like NIST CSF and ISO 27001.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="#resume">Resume</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/chrisjhwang" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+          </a>
+          <!-- TODO: replace with your real LinkedIn URL -->
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+          </a>
+          <!-- TODO: confirm this is the email you want public -->
+          <a href="mailto:christinehwang19@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>SCROLL</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section projects">
+      <div class="section__head">
+        <p class="eyebrow">// 02. Projects</p>
+        <h2>Things I&apos;ve Built</h2>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- Real project -->
+        <article class="card card--highlight">
+          <div class="card__top">
+            <h3>HPC filetransfer2026</h3>
+            <div class="card__links">
+              <a href="https://github.com/chrisjhwang/filetransfer2026" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+              </a>
+              <a href="https://github.com/chrisjhwang/filetransfer2026/tree/feature/first-commit/docs" aria-label="Docs" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+              </a>
+            </div>
+          </div>
+          <p class="card__desc">
+            An HPC file-transfer benchmarking suite that times, monitors CPU/RAM/network, and
+            checksum-verifies transfers between cluster nodes across both many-small-file and
+            single-huge-file workloads. Includes MSC and MCD — two multithreaded, multi-socket
+            copy tools written in C — benchmarked against scp and dd through a SLURM-driven harness.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="default">C</span>
+            <span class="tag" data-tag="default">Python</span>
+            <span class="tag" data-tag="default">HPC / SLURM</span>
+            <span class="tag" data-tag="default">Sockets</span>
+          </div>
+        </article>
+
+        <!-- TODO: the cards below are template examples — replace with your real projects -->
+        <article class="card">
+          <div class="card__top">
+            <h3>Network Vulnerability Scanner</h3>
+            <div class="card__links">
+              <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg></a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Python-based scanner using Scapy and Nmap integration to enumerate open ports, identify
+            service versions, and cross-reference against the CVE database for known vulnerabilities.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="default">Python</span>
+            <span class="tag" data-tag="default">Scapy</span>
+            <span class="tag" data-tag="default">Nmap</span>
+            <span class="tag" data-tag="default">CVE</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <h3>SIEM Log Aggregator</h3>
+            <div class="card__links">
+              <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg></a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Custom SIEM pipeline that ingests Windows Event Logs and syslog data, normalizes them to
+            a common schema, and surfaces anomalies using threshold-based alerting rules.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="blue">ELK Stack</span>
+            <span class="tag" data-tag="default">Python</span>
+            <span class="tag" data-tag="blue">SIEM</span>
+            <span class="tag" data-tag="blue">Blue Team</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <h3>Phishing Detection ML Model</h3>
+            <div class="card__links">
+              <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg></a>
+              <a href="#" aria-label="Live demo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg></a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Trained a logistic regression classifier on URL features and email headers to detect
+            phishing attempts with 94.2% accuracy. Deployed as a REST API for integration testing.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="default">Machine Learning</span>
+            <span class="tag" data-tag="default">Python</span>
+            <span class="tag" data-tag="default">scikit-learn</span>
+            <span class="tag" data-tag="default">NLP</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <h3>CTF Write-ups Repository</h3>
+            <div class="card__links">
+              <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg></a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Documented solutions for 40+ Capture the Flag challenges across web exploitation, binary
+            reverse engineering, cryptography, and forensics from competitions including picoCTF.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="purple">CTF</span>
+            <span class="tag" data-tag="purple">Web Exploit</span>
+            <span class="tag" data-tag="purple">Reverse Eng</span>
+            <span class="tag" data-tag="purple">Crypto</span>
+          </div>
+        </article>
+
+        <article class="card card--highlight">
+          <div class="card__top">
+            <h3>ISO 27001 Risk Assessment Tool</h3>
+            <div class="card__links">
+              <a href="#" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg></a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Automated risk register and asset inventory tool aligned to ISO 27001 Annex A controls.
+            Outputs executive-ready PDF reports with remediation priority rankings.
+          </p>
+          <div class="tags">
+            <span class="tag" data-tag="default">ISO 27001</span>
+            <span class="tag" data-tag="default">Risk Mgmt</span>
+            <span class="tag" data-tag="default">TypeScript</span>
+            <span class="tag" data-tag="default">PDF</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Resume ===== -->
+    <section id="resume" class="section resume">
+      <div class="resume__inner">
+        <div class="section__head resume__head">
+          <div>
+            <p class="eyebrow">// 03. Resume</p>
+            <h2>Background</h2>
+          </div>
+          <!-- TODO: drop resume.pdf next to these files -->
+          <a class="btn btn--ghost btn--sm" href="resume.pdf" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+            Download PDF
+          </a>
+        </div>
+
+        <div class="resume__cols">
+
+          <!-- Left: Skills + Certs -->
+          <div>
+            <h3 class="resume__label">Skills</h3>
+
+            <div class="skill-group">
+              <p class="skill-group__title">Security &amp; Compliance</p>
+              <div class="skill" data-level="88"><div class="skill__row"><span>NIST CSF / RMF</span><span class="skill__pct">88%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="82"><div class="skill__row"><span>ISO 27001 / 27002</span><span class="skill__pct">82%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="74"><div class="skill__row"><span>SOC 2 Type II</span><span class="skill__pct">74%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="85"><div class="skill__row"><span>Risk Assessment</span><span class="skill__pct">85%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+            </div>
+
+            <div class="skill-group">
+              <p class="skill-group__title">Technical Skills</p>
+              <div class="skill" data-level="90"><div class="skill__row"><span>Python</span><span class="skill__pct">90%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="78"><div class="skill__row"><span>Network Analysis</span><span class="skill__pct">78%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="80"><div class="skill__row"><span>Linux / Bash</span><span class="skill__pct">80%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="72"><div class="skill__row"><span>SQL</span><span class="skill__pct">72%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+            </div>
+
+            <div class="skill-group">
+              <p class="skill-group__title">Tools &amp; Platforms</p>
+              <div class="skill" data-level="84"><div class="skill__row"><span>Wireshark / tcpdump</span><span class="skill__pct">84%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="76"><div class="skill__row"><span>Nmap / Metasploit</span><span class="skill__pct">76%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="70"><div class="skill__row"><span>Splunk / ELK</span><span class="skill__pct">70%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+              <div class="skill" data-level="68"><div class="skill__row"><span>Burp Suite</span><span class="skill__pct">68%</span></div><div class="skill__track"><div class="skill__fill"></div></div></div>
+            </div>
+
+            <h3 class="resume__label resume__label--spaced">Certifications</h3>
+            <!-- TODO: replace with your real certifications -->
+            <div class="cert">
+              <div><p class="cert__name">CompTIA Security+</p><p class="cert__date">Mar 2024</p></div>
+              <span class="badge badge--earned">Earned</span>
+            </div>
+            <div class="cert">
+              <div><p class="cert__name">CompTIA CySA+</p><p class="cert__date">Expected Dec 2024</p></div>
+              <span class="badge badge--progress">In Progress</span>
+            </div>
+            <div class="cert">
+              <div><p class="cert__name">Google Cybersecurity Certificate</p><p class="cert__date">Nov 2023</p></div>
+              <span class="badge badge--earned">Earned</span>
+            </div>
+            <div class="cert">
+              <div><p class="cert__name">AWS Cloud Practitioner</p><p class="cert__date">Jan 2024</p></div>
+              <span class="badge badge--earned">Earned</span>
+            </div>
+          </div>
+
+          <!-- Right: Education + Experience -->
+          <div>
+            <h3 class="resume__label">Education</h3>
+            <!-- TODO: replace with your real education details -->
+            <div class="edu">
+              <p class="edu__period">Aug 2021 – May 2025</p>
+              <h4 class="edu__title">B.S. Computer Science</h4>
+              <p class="edu__meta">Concentration: Cybersecurity</p>
+              <p class="edu__meta">Your University · GPA: 3.7 / 4.0</p>
+              <div class="tags">
+                <span class="tag" data-tag="plain">Cybersecurity Club</span>
+                <span class="tag" data-tag="plain">Dean&apos;s List</span>
+                <span class="tag" data-tag="plain">CTF Team</span>
+              </div>
+            </div>
+
+            <h3 class="resume__label resume__label--spaced">Experience</h3>
+            <!-- TODO: replace with your real experience -->
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <p class="tl-period">May 2024 – Aug 2024</p>
+                <h4 class="tl-title">Cybersecurity Intern</h4>
+                <p class="tl-org">XYZ Corporation</p>
+                <ul>
+                  <li>Conducted gap analysis against NIST CSF for 3 business units, identifying 24 control deficiencies</li>
+                  <li>Assisted in drafting security policies aligned to SOC 2 Trust Services Criteria</li>
+                  <li>Ran weekly vulnerability scans using Tenable Nessus and triaged findings with the engineering team</li>
+                </ul>
+              </div>
+              <div class="tl-item">
+                <span class="tl-dot" aria-hidden="true"></span>
+                <p class="tl-period">Sep 2023 – Present</p>
+                <h4 class="tl-title">Security Research Assistant</h4>
+                <p class="tl-org">University Cybersecurity Lab</p>
+                <ul>
+                  <li>Analyzing malware samples in an isolated sandbox environment and documenting IOCs</li>
+                  <li>Contributing to research on automated threat intelligence correlation using Python</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ===== Footer (identical across all pages) ===== -->
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>© 2026 Christine Hwang</p>
-      <div class="footer-links">
-        <a class="link" href="https://github.com/chrisjhwang">github</a>
-        <a class="link" href="https://linkedin.com/in/yourusername">linkedin</a>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">© <span id="year">2026</span> <span class="accent">Christine Hwang</span></p>
+      <div class="footer__links">
+        <a href="https://github.com/chrisjhwang" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <!-- TODO: replace with your real LinkedIn URL -->
+        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:christinehwang19@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
