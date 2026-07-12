@@ -20,6 +20,7 @@
       <a class="nav__brand" href="#home">&lt;christine.hwang /&gt;</a>
       <div class="nav__links">
         <a href="#home" data-nav="home">Home</a>
+        <a href="#about" data-nav="about">About</a>
         <a href="#projects" data-nav="projects">Projects</a>
         <a href="#resume" data-nav="resume">Resume</a>
       </div>
@@ -67,6 +68,96 @@
       <div class="hero__scroll" aria-hidden="true">
         <span>SCROLL</span>
         <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section about">
+      <div class="about__inner">
+        <div class="section__head">
+          <p class="eyebrow">// 01. About</p>
+          <h2>Who I Am</h2>
+        </div>
+
+        <div class="about__body">
+          <!-- Headshot: drop a file named headshot.jpg in the repo root and it appears automatically -->
+          <div class="about__photo">
+            <img id="about-photo" src="headshot.jpg" alt="Christine Hwang" style="display:none" />
+            <div id="about-photo-ph" class="about__photo-ph" role="img" aria-label="Add a headshot">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span class="about__photo-name">headshot.jpg</span>
+              <span class="about__photo-hint">drop your photo in the repo root</span>
+            </div>
+          </div>
+
+          <div class="about__text">
+            <!-- TODO: rewrite this in your own voice -->
+            <p>
+              I'm a computer science student concentrating in cybersecurity, drawn to the field by
+              the challenge of thinking like both a builder and a breaker. I care about problems that
+              sit where technical depth meets real-world consequence — secure systems, compliance
+              frameworks, and the messy human side of keeping data safe.
+            </p>
+            <p>
+              Outside of coursework you'll usually find me <span class="about__edit">[in a CTF, tinkering
+              with a home lab, or writing up something I just learned]</span>. I think the best way to
+              understand a system is to take it apart, so I document what I build and share it along the way.
+            </p>
+
+            <!-- TODO: fill in your real details -->
+            <dl class="about__facts">
+              <div><dt>Location</dt><dd>City, State</dd></div>
+              <div><dt>Focus</dt><dd>Cyber compliance &amp; secure systems</dd></div>
+              <div><dt>Currently</dt><dd>What you're working on</dd></div>
+              <div><dt>Open to</dt><dd>Internships &amp; collaboration</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- ===== Personal interests ===== -->
+        <div class="about__interests-head">
+          <p class="eyebrow">// off the clock</p>
+        </div>
+        <div class="interests">
+
+          <!-- TODO: replace the bracketed items with your real favorites -->
+          <article class="interest">
+            <div class="interest__head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              <h3>On Repeat</h3>
+            </div>
+            <ul>
+              <li>[Artist or band]</li>
+              <li>[A genre you're into]</li>
+              <li>[A song on repeat right now]</li>
+            </ul>
+          </article>
+
+          <article class="interest">
+            <div class="interest__head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+              <h3>Now Watching</h3>
+            </div>
+            <ul>
+              <li>[A film you love]</li>
+              <li>[A series you're watching]</li>
+              <li>[Your comfort rewatch]</li>
+            </ul>
+          </article>
+
+          <article class="interest">
+            <div class="interest__head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <h3>Reading List</h3>
+            </div>
+            <ul>
+              <li>[Book you're reading] — [Author]</li>
+              <li>[Next on the list]</li>
+              <li>[An all-time favorite]</li>
+            </ul>
+          </article>
+
+        </div>
       </div>
     </section>
 

@@ -116,4 +116,17 @@
     );
     skills.forEach(function (s) { barObs.observe(s); });
   }
+
+  /* ---- About: reveal the headshot once it loads; keep placeholder if missing ---- */
+  var photo = document.getElementById('about-photo');
+  var photoPh = document.getElementById('about-photo-ph');
+  if (photo && photoPh) {
+    var showPhoto = function () { photoPh.style.display = 'none'; photo.style.display = 'block'; };
+    if (photo.complete && photo.naturalWidth > 0) {
+      showPhoto();
+    } else {
+      photo.addEventListener('load', showPhoto);
+      /* on error we leave the placeholder visible — no action needed */
+    }
+  }
 })();

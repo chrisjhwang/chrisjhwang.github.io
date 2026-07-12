@@ -244,6 +244,103 @@ h2 {
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
+/* ---------- About ---------- */
+.about__inner { max-width: var(--maxw); margin: 0 auto; }
+.about__body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4.5rem;
+}
+
+/* Headshot */
+.about__photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--card);
+  transition: border-color 0.25s ease;
+}
+.about__photo:hover { border-color: rgba(0, 212, 168, 0.45); }
+.about__photo img { width: 100%; height: 100%; object-fit: cover; }
+.about__photo-ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--dim);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: radial-gradient(circle at center, rgba(0, 212, 168, 0.07) 1px, transparent 1.4px) 0 0 / 18px 18px;
+}
+.about__photo-name { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); }
+.about__photo-hint { font-family: var(--mono); font-size: 0.66rem; color: var(--dim); letter-spacing: 0.03em; }
+
+/* About text */
+.about__text p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin: 0 0 1.25rem; max-width: 62ch; }
+.about__edit { color: var(--dim); font-style: italic; }
+
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 2rem 0 0;
+}
+.about__facts > div { background: var(--card); padding: 1rem 1.15rem; }
+.about__facts dt {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.35rem;
+}
+.about__facts dd { margin: 0; font-size: 0.85rem; color: var(--ink); }
+
+/* Personal interests */
+.about__interests-head { margin-bottom: 1.5rem; }
+.interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.interest {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.interest:hover { border-color: rgba(0, 212, 168, 0.4); transform: translateY(-3px); }
+.interest__head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; color: var(--accent); }
+.interest__head h3 { font-family: var(--mono); font-size: 0.9rem; font-weight: 700; color: var(--ink); margin: 0; }
+.interest ul { list-style: none; margin: 0; padding: 0; }
+.interest li {
+  position: relative;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+  padding: 0.45rem 0 0.45rem 1.1rem;
+  border-bottom: 1px solid rgba(30, 45, 64, 0.35);
+}
+.interest li:last-child { border-bottom: 0; }
+.interest li::before { content: "\25B8"; position: absolute; left: 0; color: var(--accent); font-size: 0.72rem; top: 0.55rem; }
+
+@media (max-width: 720px) {
+  .about__body { grid-template-columns: 1fr; gap: 2rem; }
+  .about__photo { max-width: 280px; }
+}
+
 /* ---------- Projects ---------- */
 .projects { max-width: var(--maxw); margin: 0 auto; }
 .project-grid {
