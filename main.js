@@ -48,10 +48,10 @@
   /* ---- Hero: typing effect cycling through roles ---- */
   var roles = [
     'Cybersecurity Student',
-    'Compliance Analyst',
-    'Security Researcher',
+    'Technical Translator',
+    'Policy-Minded Technologist',
     'CTF Competitor',
-    'Threat Hunter'
+    'Bridge-Builder'
   ];
   var typedEl = document.getElementById('typed-role');
   if (typedEl) {
