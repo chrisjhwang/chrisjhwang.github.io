@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Projects</title>
-  <meta name="description" content="Selected projects by Your Name." />
+  <title>Christine Hwang — Projects</title>
+  <meta name="description" content="Selected projects by Christine Hwang." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
 
   <header class="site-header">
     <nav class="nav wrap" aria-label="Primary">
-      <a class="nav__brand" href="index.html">your<span>.name</span></a>
+      <a class="nav__brand" href="index.html">christine<span>.hwang</span></a>
       <div class="nav__links">
         <a href="index.html">home</a>
         <a href="projects.html" aria-current="page">projects</a>
@@ -41,20 +41,24 @@
         <article class="project">
           <span class="project__index">01</span>
           <div class="project__title">
-            <h3>Project name</h3>
+            <h3>filetransfer2026</h3>
           </div>
           <p class="project__desc">
-            <strong>What it does</strong>, in one sentence, then the interesting part —
-            the problem it solves or the technique behind it. Two or three sentences max.
+            <strong>An HPC file-transfer benchmarking suite</strong> that times, monitors CPU/RAM/network,
+            and checksum-verifies transfers between cluster nodes across both many-small-file and
+            single-huge-file workloads. Includes <strong>MSC</strong> and <strong>MCD</strong> — two
+            multithreaded, multi-socket copy tools written in C — benchmarked against scp and zdd
+            through a SLURM-driven harness.
           </p>
           <div class="tags">
+            <span class="tag">C</span>
             <span class="tag">Python</span>
-            <span class="tag">Tech</span>
-            <span class="tag">Tech</span>
+            <span class="tag">HPC / SLURM</span>
+            <span class="tag">Sockets</span>
           </div>
           <div class="project__links">
-            <a class="link" href="#">Code →</a>
-            <a class="link" href="#">Live demo →</a>
+            <a class="link" href="https://github.com/chrisjhwang/filetransfer2026">Code →</a>
+            <a class="link" href="https://github.com/chrisjhwang/filetransfer2026/tree/feature/first-commit/docs">Docs →</a>
           </div>
         </article>
 
@@ -116,10 +120,9 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>© 2026 Your Name</p>
+      <p>© 2026 Christine Hwang</p>
       <div class="footer-links">
-        <a class="link" href="mailto:you@example.com">email</a>
-        <a class="link" href="https://github.com/yourusername">github</a>
+        <a class="link" href="https://github.com/chrisjhwang">github</a>
         <a class="link" href="https://linkedin.com/in/yourusername">linkedin</a>
       </div>
     </div>
