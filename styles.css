@@ -377,6 +377,13 @@ h2 {
 .card__links a { color: var(--dim); display: inline-flex; transition: color 0.2s ease; }
 .card__links a:hover { color: var(--accent); }
 .card__desc { font-size: 0.875rem; color: var(--muted); line-height: 1.65; margin: 0; flex-grow: 1; }
+.card__desc a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 212, 168, 0.35);
+  transition: border-color 0.2s ease;
+}
+.card__desc a:hover { border-bottom-color: var(--accent); }
 
 /* ---------- Tags ---------- */
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
