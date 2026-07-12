@@ -350,6 +350,7 @@ h2 {
 .interest li a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
 .interest li a:hover { color: var(--accent); }
 .spotify-ico { width: 13px; height: 13px; margin-left: 0.4rem; vertical-align: -0.12em; color: #1DB954; }
+.map-ico { width: 13px; height: 13px; margin-left: 0.4rem; vertical-align: -0.12em; color: #EA4335; }
 
 @media (max-width: 720px) {
   .about__body { grid-template-columns: 1fr; gap: 2rem; }
