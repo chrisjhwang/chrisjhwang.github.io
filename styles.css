@@ -468,6 +468,8 @@ h2 {
 }
 .cert__name { font-family: var(--mono); font-size: 0.8rem; color: var(--ink); margin: 0 0 0.15rem; }
 .cert__date { font-size: 0.72rem; color: var(--dim); margin: 0; }
+.cert__date a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+.cert__date a:hover { border-bottom-color: var(--accent); }
 .badge {
   font-family: var(--mono);
   font-size: 0.65rem;
